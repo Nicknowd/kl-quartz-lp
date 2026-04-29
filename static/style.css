@@ -274,9 +274,6 @@ img {
 
 .hero-content .highlight-line .gold {
   color: #FFD500;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 2px;
 }
 
 .hero-content .sub-light {
