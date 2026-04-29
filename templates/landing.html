@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Soluções Completas em Controle de Acesso e Registro de Ponto de Funcionários para Empresas em Porto Alegre">
+  <title>Relógio Ponto Online | KL Quartz</title>
+  <link rel="icon" type="image/x-icon" href="https://i.imgur.com/BAQxksR.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <a href="/" class="logo"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F33df825f-ae98-42ff-b628-4074ef14c41b%2Ff581ec59-logo-kl_1000000000000000000028.png?png8=true" alt="KL Quartz"></a>
+  <div class="nav-actions">
+    <a href="tel:5123124225" class="phone-link">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+      <span>(51) 2312-4225</span>
+    </a>
+    <a href="#" class="cta-header" onclick="openFormModal();return false">Solicite orçamento</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+
+      <h1><span class="gold-text">Relógio Ponto</span> em Porto Alegre e Região Metropolitana</h1>
+      <p class="highlight-line">PREÇO <span class="gold">IMBATÍVEL</span>, Instalação <br>e suporte presencial</p>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="number">10k+</div><div class="label">Clientes</div></div>
+        <div class="hero-stat"><div class="number">30+</div><div class="label">Anos</div></div>
+        <div class="hero-stat"><div class="number">24h</div><div class="label">Suporte</div></div>
+      </div>
+      <!-- Desktop CTA button -->
+      <button class="hero-cta-btn hero-cta-desktop" id="hero-cta-btn" onclick="openFormModal()">
+        Solicite seu orçamento gratuito
+        <span class="hero-cta-arrow">→</span>
+      </button>
+    </div>
+    <!-- Desktop-only: product image on the right -->
+    <div class="hero-product-desktop" id="hero-product-right">
+      <div class="hero-product-glow"></div>
+      <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Fecf2dbf8-5cfe-49ee-a24d-37a63d728ce7%2Fb716a212-01_108s08r000000000000028.png?w=316&h=315&png8=true" alt="Relógio Ponto">
+    </div>
+    <!-- Mobile-only: product image overlapping CTA button -->
+    <div class="hero-mobile-cta-area">
+      <div class="hero-mobile-product">
+        <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Fecf2dbf8-5cfe-49ee-a24d-37a63d728ce7%2Fb716a212-01_108s08r000000000000028.png?w=316&h=315&png8=true" alt="Relógio Ponto">
+      </div>
+      <button class="hero-cta-btn hero-cta-mobile" onclick="openFormModal()">
+        Solicite seu orçamento gratuito
+        <span class="hero-cta-arrow">→</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FORM MODAL (Desktop) -->
+<div class="form-modal-overlay" id="formModalOverlay" onclick="closeFormModal(event)">
+  <div class="form-modal" id="formModal">
+    <button class="form-modal-close" onclick="closeFormModal()" aria-label="Fechar">×</button>
+    <h2>Solicite um <span class="accent">orçamento</span></h2>
+    <p class="form-subtitle">Preencha e entraremos em contato</p>
+    <form action="/submit" method="POST" id="main-form" class="lead-form" novalidate>
+      <input type="text" name="name" placeholder="Seu nome completo" required>
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <input type="text" name="data__cnpj__1" placeholder="CNPJ da empresa" required class="cnpj-input" id="cnpj-input">
+      <input type="tel" name="phone" placeholder="Telefone com DDD" required>
+      <div class="custom-select" id="select-produto">
+        <input type="hidden" name="data__produto__0" required>
+        <div class="custom-select-trigger" tabindex="0">
+          <span class="custom-select-value" data-placeholder="Escolha um produto">Escolha um produto</span>
+          <svg class="custom-select-arrow" viewBox="0 0 12 7" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <ul class="custom-select-options">
+          <li data-value="Relógio Ponto">Relógio Ponto</li>
+          <li data-value="Controle de Acesso">Controle de Acesso</li>
+          <li data-value="Sirene">Sirene</li>
+          <li data-value="Relógio Vigia">Relógio Vigia</li>
+          <li data-value="Acessórios">Acessórios</li>
+          <li data-value="Outros">Outros</li>
+        </ul>
+      </div>
+      <div class="custom-select" id="select-funcionarios">
+        <input type="hidden" name="data__funcionarios__1" required>
+        <div class="custom-select-trigger" tabindex="0">
+          <span class="custom-select-value" data-placeholder="Número de Funcionários">Número de Funcionários</span>
+          <svg class="custom-select-arrow" viewBox="0 0 12 7" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <ul class="custom-select-options">
+          <li data-value="Até 10 funcionários">Até 10</li>
+          <li data-value="De 11 a 20 funcionários">11 a 20</li>
+          <li data-value="De 21 a 50 funcionários">21 a 50</li>
+          <li data-value="De 51 a 100 funcionários">51 a 100</li>
+          <li data-value="Acima de 100 funcionários">Acima de 100</li>
+        </ul>
+      </div>
+      <textarea name="message" placeholder="Descreva sua necessidade..." required></textarea>
+      <input type="hidden" name="captation_means" value="[KAIZEN] Landing Page RS">
+      <input type="hidden" name="customer_domain" value="lp.kl-quartz.com.br">
+      <button type="submit" class="btn-submit">Enviar solicitação →</button>
+    </form>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits section-pad" id="benefits">
+  <div class="section-header reveal">
+
+    <h2>Tudo que sua empresa precisa para controlar <span class="primary">a jornada de trabalho</span></h2>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card reveal reveal-delay-1">
+      <div class="card-img"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F41dc8dac-9c6e-4e84-aad8-59b218500906%2F2841f582-001_107804j000000000000028.png?w=260&h=163&png8=true" alt="Software RHiD"></div>
+      <div class="card-body"><h3>Software de apuração RHiD</h3><p>Calcule as horas trabalhadas, faltas e atrasos facilmente com nosso software de apuração de ponto na nuvem.</p></div>
+    </div>
+    <div class="benefit-card reveal reveal-delay-2">
+      <div class="card-img"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F7c9102fe-97fd-4e00-986b-1dcf01994d4c%2F24898fa4-002_107804j000000000000028.png?w=260&h=163&png8=true" alt="App Mobile"></div>
+      <div class="card-body"><h3>App de ponto mobile</h3><p>Pelo app, o gestor acompanha e gerencia as marcações em tempo real e o funcionário registra o ponto.</p></div>
+    </div>
+    <div class="benefit-card reveal reveal-delay-3">
+      <div class="card-img"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Fd9f37ca8-88c1-430f-9fd9-730ed7f28d78%2F7d5fa7e7-003_107804j000000000000028.png?w=260&h=163&png8=true" alt="iDClass"></div>
+      <div class="card-body"><h3>Relógio de ponto iDClass</h3><p>Relógio de ponto homologado e atualizado com as exigências do Ministério do Trabalho.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section section-pad" id="cta">
+  <div class="section-header reveal">
+
+    <h2><span class="primary">Solução ideal para empresas de todos os portes</span>,<br>independente do número de funcionários.</h2>
+  </div>
+  <a href="#" class="hero-cta-btn reveal" onclick="openFormModal();return false">
+    Solicite seu orçamento gratuito
+    <span class="hero-cta-arrow">→</span>
+  </a>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials section-pad" id="testimonials">
+  <div class="section-header reveal">
+
+    <h2>Mais de <span class="primary">10 Mil clientes</span> confiam na KL Quartz</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal reveal-delay-1">
+      <span class="quote-icon">"</span>
+      <div class="card-logo"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F85412f02-b7a8-49f2-8698-249bae4b2ed8%2F940d0f10-grupo-epavi-cliente-kl-quartz-1_103m03m000000000000028.png?w=130&h=130&png8=true" alt="EPAVI"></div>
+      <blockquote>Dada complexidade com mais de 7.000 funcionários em mais de 500 postos, a EPAVI tem na KL Quartz uma grande parceria, que há mais de 6 anos atende nossas necessidades.</blockquote>
+      <div class="author"><strong>Suzete Lucinda Zanuni Pinheiro</strong><span>Gerente de Controladoria e Patrimônio</span></div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <span class="quote-icon">"</span>
+      <div class="card-logo"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F89538be1-8ec6-4b67-af24-20af45af933c%2Fab6af192-qxeibk-moving_103m02d000000000000028.png?w=130&h=85&png8=true" alt="Moving VINCI"></div>
+      <blockquote>A Moving VINCI Park é parceira da KL-Quartz, pela qualidade dos equipamentos bem como suporte rápido e eficaz, atendendo as necessidades a nível Brasil.</blockquote>
+      <div class="author"><strong>Leticia Schmidt Barcellos</strong><span>Gerente Departamento Pessoal</span></div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-3">
+      <span class="quote-icon">"</span>
+      <div class="card-logo"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2Ffaf72b2b-59aa-4e26-a0cd-64b781a7b373%2F5dbb2f29-sodexo-logo-svg_103m01g000000000000028.png?w=130&h=52&png8=true" alt="Sodexo"></div>
+      <blockquote>A KL Quartz compreendeu a nossa cultura e dinâmica, hoje já são mais de 5 anos de parceria, com foco na excelência de atendimento.</blockquote>
+      <div class="author"><strong>Cássio Stein</strong><span>Gerente de Compras</span></div>
+    </div>
+  </div>
+  <div class="testimonials-wide">
+    <div class="testimonial-card wide reveal">
+      <span class="quote-icon">"</span>
+      <div class="card-logo"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F8ad0e71b-bdd2-48ef-91c8-03780869a253%2Fe8239f8a-captura-de-tela-2020-02-28-as-17-04-26_104e01t000000000000028.png?w=158&h=65&png8=true" alt="O Boticário"></div>
+      <blockquote>Somos franqueados do Grupo O Boticário em Porto Alegre e Canoas. Um sistema de ponto eletrônico completo e seguro nos permite gerir de forma mais tranquila nossas lojas. Fizemos a opção da KL Quartz por indicação e hoje estamos satisfeitos com equipamentos e serviços oferecidos.</blockquote>
+      <div class="author"><strong>Paula Spilborghs</strong><span>Franqueada O Boticário</span></div>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px;" class="reveal">
+    <a href="#" class="hero-cta-btn" onclick="openFormModal();return false">
+      Solicite seu orçamento gratuito
+      <span class="hero-cta-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section-pad" id="about">
+  <div class="about-inner">
+    <div class="about-logo"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F30b1a2fc-e23b-45c0-9b8e-12aac971ae30%2F66ef9bc6-ativo-2_106o02w000000000000028.png?w=240&h=104&png8=true" alt="KL Quartz 40 anos"></div>
+    <div class="about-text">
+      <p>A KL Quartz é uma empresa com mais de 30 anos de experiência nos mercados de Relógio de Ponto biométrico e Controle de Acesso. Atendendo todo o Brasil, oferece a solução completa em equipamentos, softwares, suporte e manutenção.</p>
+      <span class="address">Av. Amazonas, 840 — Porto Alegre/RS — Brasil</span>
+    </div>
+    <div class="about-contact">
+      <div class="contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> comercial@kl-quartz.com.br</div>
+      <div class="contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.37 1.61.7 2.38a2 2 0 01-.45 2.11L8.09 9.5a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.77.33 1.57.57 2.38.7A2 2 0 0122 16.92z"/></svg> (51) 2312-4225</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span class="developed-by">Desenvolvido por</span>
+  <a href="https://agenciakaizen.com.br/" target="_blank"><img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbouncepreview.com%2Fpublish%2Fassets%2F03a6fd84-00aa-47d7-80a1-875a14b1a708%2F840df0d8-logo-kaizen-unbounce_105k00t000000000000028.png?w=200&h=29&png8=true" alt="Agência Kaizen"></a>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="whats-float" id="whatsIcon">
+  <a href="https://api.whatsapp.com/send?l=pt_BR&phone=555133589494&text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" title="WhatsApp">
+    <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDkwIDkwIj4KPGc+Cgk8cGF0aCBkPSJNOTAsNDMuODQxYzAsMjQuMjEzLTE5Ljc3OSw0My44NDEtNDQuMTgyLDQzLjg0MWMtNy43NDcsMC0xNS4wMjUtMS45OC0yMS4zNTctNS40NTVMMCw5MGw3Ljk3NS0yMy41MjJjLTQuMDIzLTYuNjA2LTYuMzQtMTQuMzU0LTYuMzQtMjIuNjM3QzEuNjM1LDE5LjYyOCwyMS40MTYsMCw0NS44MTgsMEM3MC4yMjMsMCw5MCwxOS42MjgsOTAsNDMuODQxeiBNNDUuODE4LDYuOTgyYy0yMC40ODQsMC0zNy4xNDYsMTYuNTM1LTM3LjE0NiwzNi44NTljMCw4LjA2NSwyLjYyOSwxNS41MzQsNy4wNzYsMjEuNjFMMTEuMTA3LDc5LjE0bDE0LjI3NS00LjUzN2M1Ljg2NSwzLjg1MSwxMi44OTEsNi4wOTcsMjAuNDM3LDYuMDk3YzIwLjQ4MSwwLDM3LjE0Ni0xNi41MzMsMzcuMTQ2LTM2Ljg1N1M2Ni4zMDEsNi45ODIsNDUuODE4LDYuOTgyeiBNNjguMTI5LDUzLjkzOGMtMC4yNzMtMC40NDctMC45OTQtMC43MTctMi4wNzYtMS4yNTRjLTEuMDg0LTAuNTM3LTYuNDEtMy4xMzgtNy40LTMuNDk1Yy0wLjk5My0wLjM1OC0xLjcxNy0wLjUzOC0yLjQzOCwwLjUzN2MtMC43MjEsMS4wNzYtMi43OTcsMy40OTUtMy40Myw0LjIxMmMtMC42MzIsMC43MTktMS4yNjMsMC44MDktMi4zNDcsMC4yNzFjLTEuMDgyLTAuNTM3LTQuNTcxLTEuNjczLTguNzA4LTUuMzMzYy0zLjIxOS0yLjg0OC01LjM5My02LjM2NC02LjAyNS03LjQ0MWMtMC42MzEtMS4wNzUtMC4wNjYtMS42NTYsMC40NzUtMi4xOTFjMC40ODgtMC40ODIsMS4wODQtMS4yNTUsMS42MjUtMS44ODJjMC41NDMtMC42MjgsMC43MjMtMS4wNzUsMS4wODItMS43OTNjMC4zNjMtMC43MTcsMC4xODItMS4zNDQtMC4wOS0xLjg4M2MtMC4yNy0wLjUzNy0yLjQzOC01LjgyNS0zLjM0LTcuOTc3Yy0wLjkwMi0yLjE1LTEuODAzLTEuNzkyLTIuNDM2LTEuNzkyYy0wLjYzMSwwLTEuMzU0LTAuMDktMi4wNzYtMC4wOWMtMC43MjIsMC0xLjg5NiwwLjI2OS0yLjg4OSwxLjM0NGMtMC45OTIsMS4wNzYtMy43ODksMy42NzYtMy43ODksOC45NjNjMCw1LjI4OCwzLjg3OSwxMC4zOTcsNC40MjIsMTEuMTEzYzAuNTQxLDAuNzE2LDcuNDksMTEuOTIsMTguNSwxNi4yMjNDNTguMiw2NS43NzEsNTguMiw2NC4zMzYsNjAuMTg2LDY0LjE1NmMxLjk4NC0wLjE3OSw2LjQwNi0yLjU5OSw3LjMxMi01LjEwN0M2OC4zOTgsNTYuNTM3LDY4LjM5OCw1NC4zODYsNjguMTI5LDUzLjkzOHoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8L3N2Zz4=" alt="WhatsApp">
+  </a>
+  <span class="tooltip">Fale conosco!</span>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Scroll reveal
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Header shadow on scroll
+const hdr=document.getElementById('header');
+window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>10),{passive:true});
+
+// CNPJ mask — apply to ALL cnpj inputs
+document.querySelectorAll('.cnpj-input').forEach(ci=>{
+  ci.addEventListener('input',()=>{
+    ci.value=ci.value.replace(/\D/g,'').replace(/^(\d{2})(\d)/,'$1.$2').replace(/^(\d{2})\.(\d{3})(\d)/,'$1.$2.$3').replace(/\.(\d{3})(\d)/,'.$1/$2').replace(/(\d{4})(\d)/,'$1-$2').replace(/(-\d{2})\d+?$/,'$1');
+    ci.style.border='';ci.classList.remove('shake-field');
+  });
+});
+
+// Phone mask — apply to ALL phone inputs
+document.querySelectorAll('input[name="phone"]').forEach(pi=>{
+  pi.addEventListener('input',function(){let v=this.value.replace(/\D/g,'').substring(0,11);if(v.length>6)this.value=`(${v.substring(0,2)}) ${v.substring(2,7)}-${v.substring(7)}`;else if(v.length>2)this.value=`(${v.substring(0,2)}) ${v.substring(2)}`;else if(v.length>0)this.value=`(${v}`});
+});
+
+// Form validation — apply to ALL lead forms
+document.querySelectorAll('.lead-form').forEach(form=>{
+  form.addEventListener('submit',function(e){
+    const ci=form.querySelector('.cnpj-input');
+    if(ci){const raw=ci.value.replace(/\D/g,'');
+    if(raw.length!==14){e.preventDefault();ci.style.border='2px solid #EF1638';ci.classList.add('shake-field');ci.focus()}}
+  });
+});
+
+// Form Modal
+const overlay=document.getElementById('formModalOverlay');
+const modal=document.getElementById('formModal');
+function openFormModal(){
+  overlay.classList.add('active');
+  document.body.style.overflow='hidden';
+  // Focus first input after animation
+  setTimeout(()=>{const inp=modal.querySelector('input');if(inp)inp.focus()},350);
+}
+function closeFormModal(e){
+  if(e && e.target!==overlay) return;
+  overlay.classList.remove('active');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('active'))closeFormModal()});
+
+// Smooth scroll (skip # links that open modal)
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){
+  const href=this.getAttribute('href');
+  if(href==='#')return;
+  e.preventDefault();const t=document.querySelector(href);
+  if(t)t.scrollIntoView({behavior:'smooth',block:'center'});
+})});
+
+// Custom Select Dropdowns
+document.querySelectorAll('.custom-select').forEach(select => {
+  const trigger = select.querySelector('.custom-select-trigger');
+  const valueSpan = select.querySelector('.custom-select-value');
+  const options = select.querySelectorAll('.custom-select-options li');
+  const hiddenInput = select.querySelector('input[type="hidden"]');
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Close all other selects
+    document.querySelectorAll('.custom-select.open').forEach(s => {
+      if (s !== select) s.classList.remove('open');
+    });
+    select.classList.toggle('open');
+  });
+
+  trigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      trigger.click();
+    }
+    if (e.key === 'Escape') select.classList.remove('open');
+  });
+
+  options.forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      hiddenInput.value = opt.dataset.value;
+      valueSpan.textContent = opt.textContent;
+      valueSpan.classList.add('selected');
+      // Mark active item
+      options.forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+      select.classList.remove('open');
+    });
+  });
+});
+
+// Close custom selects on outside click
+document.addEventListener('click', () => {
+  document.querySelectorAll('.custom-select.open').forEach(s => s.classList.remove('open'));
+});
+</script>
+</body>
+</html>
